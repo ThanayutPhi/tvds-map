@@ -1,36 +1,3 @@
-<!-- <div>
-  <agm-map class="map-size" [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="closeInfo()">
-    <div *ngFor="let markerItem of markersData; let i = index">
-      <div *ngIf="markerItem.longitude || markerItem.latitude">
-        <agm-marker (markerClick)="clickedInfoWindow(infoWindow)" [latitude]="markerItem.latitude"
-          [longitude]="markerItem.longitude" [iconUrl]="markerItem.icon">
-
-          <agm-info-window #infoWindow>
-            <div class="h3">
-              {{ markerItem.title ? markerItem.title : "คุณ" }}
-              {{
-                markerItem.displayName ? markerItem.displayName : "ไม่ระบุ" }}
-            </div>
-            <div class="h4 mt-8">
-              {{ markerItem.addressLine1 }}
-              {{ markerItem.addressStreet }}
-              {{ markerItem.addressSubDistrict }}
-              {{ markerItem.addressDistrict }}
-            </div>
-            <div class="h4">
-              {{ markerItem.addressProvince }}
-              {{ markerItem.addressPostCode }}
-            </div>
-            <div class="mt-8 text-right">
-              <button mat-flat-button color="primary" (click)="clickedMarker(markerItem, i)"> เลือก </button>
-            </div>
-          </agm-info-window>
-
-        </agm-marker>
-      </div>
-    </div>
-  </agm-map>
-</div> -->
 <mat-sidenav-container class="full-d-hsize">
   <mat-sidenav #sidenave class="sidenav-side" mode="side" [(opened)]="sideNaveOpened" fixedInViewport="true"
     fixedTopGap="65" fixedBottomGap="0">
@@ -70,49 +37,8 @@
               <span class="delivery-color">รถธรรมธุรกิจ</span>
               <span class="shareholder-color" *ngIf="item.isShareHolder">, ผู้ถือหุ้น</span>
             </div>
-            <!-- <div>
-              สถานะ:
-              <span *ngIf="item.contactStatus === 'select'">เลือกแล้ว</span>
-              <span *ngIf="item.contactStatus === 'waitapprove'">รอตอบกลับ</span>
-              <span *ngIf="item.contactStatus === 'waitcontact'">รอติดต่อ</span>
-              <span *ngIf="item.contactStatus === 'confirm'">ยืนยัน</span>
-              <span *ngIf="item.contactStatus === 'reject'">ปฏิเสธ</span>
-            </div>
-            <div *ngIf="item.contactStatus === 'reject'">
-              เหตุผล: {{ item.remark }}
-            </div> -->
           </div>
           <div class="mt-8" fxLayout="row wrap" fxLayoutAlign="start center">
-            <!-- <div fxFlex="25">
-              <button mat-flat-button class="btn-list-status">
-                Send Line
-              </button>
-            </div>
-
-            <div fxFlex="25">
-              <button mat-flat-button class="btn-list-status">
-                Confirm
-              </button>
-            </div>
-
-            <div fxFlex="25">
-              <button mat-flat-button class="btn-list-status">
-                Reject
-              </button>
-            </div>
-
-            <div fxFlex="25">
-              <button mat-flat-button class="btn-list-status">
-                Confirm
-              </button>
-            </div>
-
-            <div fxFlex="25">
-              <button mat-flat-button class="btn-list-status">
-                Reject
-              </button>
-            </div> -->
-
             <div fxFlex="25">
               <button mat-flat-button color="warn" (click)="onDeleteList(i)">
                 <mat-icon>delete</mat-icon>
