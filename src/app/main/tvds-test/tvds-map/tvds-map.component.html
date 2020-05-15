@@ -38,11 +38,12 @@
               <span class="shareholder-color" *ngIf="item.isShareHolder">, ผู้ถือหุ้น</span>
             </div>
           </div>
-          <div class="mt-8" fxLayout="row wrap" fxLayoutAlign="end>
-            <div fxFlex=" 25">
-            <button mat-flat-button color="warn" (click)="onDeleteList(i)">
-              <mat-icon>delete</mat-icon>
-            </button>
+          <div class="mt-8" fxLayout="row wrap" fxLayoutAlign="end">
+            <div fxFlex="25">
+              <button mat-flat-button color="warn" (click)="onDeleteList(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
           </div>
         </div>
       </div>
